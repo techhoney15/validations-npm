@@ -1,6 +1,6 @@
 {
   "name": "check-valid-email",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is NPM package",
   "main": "index.js",
   "type": "module",

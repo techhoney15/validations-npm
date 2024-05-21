@@ -5,5 +5,5 @@ A simple NPM package example.
 ## Installation
 
 ```bash
-npm install my-package
+npm install check-valid-email
 # NPM-Package

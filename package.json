@@ -1,11 +1,8 @@
 {
-  "name": "myfirstnpmpackage",
+  "name": "check-valid-email",
   "version": "1.0.0",
   "description": "This is NPM package",
   "main": "index.js",
-  "scripts": {
-    "test": "https://github.com/honey10597/NPM-Package.git"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/honey10597/NPM-Package.git"

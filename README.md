@@ -6,4 +6,3 @@ A simple NPM package example.
 
 ```bash
 npm install check-valid-email
-# NPM-Package

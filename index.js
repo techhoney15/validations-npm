@@ -1,10 +1,10 @@
 function checkValidEmail(email) {
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
     if (emailRegex.test(email) == false) {
-        return false;
+        return false
     } else {
-        return true;
+        return true
     }
 }
 
-module.exports = { checkValidEmail };
+module.exports = checkValidEmail

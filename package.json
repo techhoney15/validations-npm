@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "This is NPM package",
   "main": "index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/honey10597/NPM-Package.git"

@@ -7,4 +7,5 @@ function checkValidEmail(email) {
     }
 }
 
-module.exports = checkValidEmail
+export default checkValidEmail;
+

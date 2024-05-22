@@ -1,9 +1,16 @@
 {
-  "name": "check-valid-email",
+  "name": "check-javascript-typescript-validations",
   "version": "1.0.2",
-  "description": "This is NPM package",
-  "main": "index.js",
-  "type": "module",
+  "description": "To check all the validations related to javascript and typescript.",
+  "main": "dist/validators.js",
+  "types": "dist/validators.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/honey10597/NPM-Package.git"
@@ -13,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/honey10597/NPM-Package/issues"
   },
-  "homepage": "https://github.com/honey10597/NPM-Package#readme"
+  "homepage": "https://github.com/honey10597/NPM-Package#readme",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
 }

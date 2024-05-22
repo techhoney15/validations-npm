@@ -1,6 +1,6 @@
 {
   "name": "check-javascript-typescript-validations",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "To check all the validations related to javascript and typescript.",
   "main": "dist/validators.js",
   "types": "dist/validators.d.ts",
@@ -25,5 +25,8 @@
     "@types/node": "^20.12.12",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
   }
 }

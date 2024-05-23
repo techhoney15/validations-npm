@@ -1,4 +1,3 @@
-import moment from "moment";
 import { MixedType } from "./types"
 
 // Email is valid or not
@@ -80,4 +79,59 @@ export function isStrongPassword(password: string | number): boolean {
 export function isValidDate(date: any): boolean {
     const parsedDate = Date.parse(date);
     return !isNaN(parsedDate);
+}
+
+// Remove Duplicates from array
+export function removeDuplicatesFromArray<T>(array: T[]): T[] {
+    if (Array.isArray(array) && array.length > 0) {
+        return array.filter((value, index, self) => self.indexOf(value) === index);
+    } else {
+        return array;
+    }
+}
+// Sort array 
+export function sortArray<T extends number | string>(array: T[], ascending: boolean = true): T[] {
+    if (Array.isArray(array) && array.length > 0) {
+        return array.sort((a, b) => {
+            if (ascending) {
+                return a < b ? -1 : a > b ? 1 : 0;
+            } else {
+                return a > b ? -1 : a < b ? 1 : 0;
+            }
+        });
+    } else {
+        return array;
+    }
+}
+
+// Remove duplicates and sort an array
+export function removeDuplicatesAndSortArray<T extends number | string>(array: T[], ascending: boolean = true): T[] {
+    const arr = removeDuplicatesFromArray(array)
+    const newArr = sortArray(array, ascending)
+    return newArr
+}
+
+// Compare 2 strings are equal or not
+export function compareTwoStrings(str1: string, str2: string): boolean {
+    if (typeof str1 != "string" && typeof str2 != "string") {
+        return false
+    } else if (VariableIsEmpty(str1)) {
+        return false
+    } else if (VariableIsEmpty(str2)) {
+        return false
+    } else if (str1.length != str2.length) {
+        return false
+    } else {
+        var _NUM1 = ""
+        var _NUM2 = ""
+        for (var i = 0; i < String(str1).length; i++) {
+            _NUM1 = _NUM1 + "" + str1.charCodeAt(i)
+            _NUM2 = _NUM2 + "" + str2.charCodeAt(i)
+        }
+        if (String(_NUM1) === String(_NUM2)) {
+            return true
+        } else {
+            return false
+        }
+    }
 }

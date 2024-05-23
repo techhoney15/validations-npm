@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.VariableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
+exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.VariableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
 // Email is valid or not
 function isValidEmail(email) {
     var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
@@ -91,3 +91,69 @@ function isValidDate(date) {
     return !isNaN(parsedDate);
 }
 exports.isValidDate = isValidDate;
+// Remove Duplicates from array
+function removeDuplicatesFromArray(array) {
+    if (Array.isArray(array) && array.length > 0) {
+        return array.filter(function (value, index, self) { return self.indexOf(value) === index; });
+    }
+    else {
+        return array;
+    }
+}
+exports.removeDuplicatesFromArray = removeDuplicatesFromArray;
+// Sort array 
+function sortArray(array, ascending) {
+    if (ascending === void 0) { ascending = true; }
+    if (Array.isArray(array) && array.length > 0) {
+        return array.sort(function (a, b) {
+            if (ascending) {
+                return a < b ? -1 : a > b ? 1 : 0;
+            }
+            else {
+                return a > b ? -1 : a < b ? 1 : 0;
+            }
+        });
+    }
+    else {
+        return array;
+    }
+}
+exports.sortArray = sortArray;
+// Remove duplicates and sort an array
+function removeDuplicatesAndSortArray(array, ascending) {
+    if (ascending === void 0) { ascending = true; }
+    var arr = removeDuplicatesFromArray(array);
+    var newArr = sortArray(array, ascending);
+    return newArr;
+}
+exports.removeDuplicatesAndSortArray = removeDuplicatesAndSortArray;
+// Compare 2 strings are equal or not
+function compareTwoStrings(str1, str2) {
+    if (typeof str1 != "string" && typeof str2 != "string") {
+        return false;
+    }
+    else if (VariableIsEmpty(str1)) {
+        return false;
+    }
+    else if (VariableIsEmpty(str2)) {
+        return false;
+    }
+    else if (str1.length != str2.length) {
+        return false;
+    }
+    else {
+        var _NUM1 = "";
+        var _NUM2 = "";
+        for (var i = 0; i < String(str1).length; i++) {
+            _NUM1 = _NUM1 + "" + str1.charCodeAt(i);
+            _NUM2 = _NUM2 + "" + str2.charCodeAt(i);
+        }
+        if (String(_NUM1) === String(_NUM2)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+}
+exports.compareTwoStrings = compareTwoStrings;

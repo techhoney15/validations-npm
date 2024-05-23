@@ -19,7 +19,7 @@ yarn add check-javascript-typescript-validations
 
 ## Overview
 
-```bash
+
 ```javascript
 import {
     isValidEmail,

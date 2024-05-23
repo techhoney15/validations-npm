@@ -5,7 +5,47 @@
 
 ## Overview
 
-`check-javascript-typescript-validations` is a utility library that provides various validation functions for JavaScript and TypeScript. It includes common validations such as checking email formats, phone numbers, password strength, and more. The library is written in TypeScript, ensuring type safety and better development experience.
+The check-javascript-typescript-validations package offers essential utility functions for validating common data types and performing array operations in JavaScript and TypeScript environments. It simplifies the validation process by providing functions to check email validity, phone number formatting, password strength, and date validity. Additionally, it includes functions to determine the language of a text, check variable emptiness, and verify numeric data types. For array manipulation, the package offers functions to remove duplicates, sort arrays, and both remove duplicates and sort arrays simultaneously. These utilities enhance code quality and reliability by ensuring that data meets specified criteria, contributing to more robust applications and smoother user experiences.
+
+
+## ValidationFunctions.ts
+```bash
+isValidEmail
+This function validates whether an email address is in the correct format.
+
+isValidPhoneNumber
+This function validates the format of a phone number, with an optional parameter to specify the required length.
+
+isStrongPassword
+This function checks the strength of a password, ensuring it meets specific criteria for complexity.
+
+isValidDate
+This function validates the format and correctness of a date.
+
+isTextArabic
+This function determines whether a text string is in Arabic.
+
+isTextEnglish
+This function determines whether a text string is in English.
+
+VariableIsEmpty
+This function checks whether a variable is empty or undefined.
+
+checkIsNumber
+This function checks if a value is a number.
+```
+
+## ArrayOperations.ts
+```bash
+removeDuplicatesFromArray
+This function removes duplicate elements from an array while preserving the original order.
+
+sortArray
+This function sorts the elements of an array in ascending or descending order.
+
+removeAndSortArray
+This function removes duplicates from an array and then sorts it, providing a streamlined approach to data manipulation.
+```
 
 ## Installation
 

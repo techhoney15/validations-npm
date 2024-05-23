@@ -20,7 +20,7 @@ yarn add check-javascript-typescript-validations
 ## Overview
 
 ```bash
-
+```javascript
 import {
     isValidEmail,
     deepCloneArray,
@@ -93,4 +93,4 @@ console.log('Array after removing duplicates and sorting:', processedArray); // 
 const str1 = "hello";
 const str2 = "hello";
 console.log(`Are "${str1}" and "${str2}" equal?`, compareTwoStrings(str1, str2)); // true
-
+```

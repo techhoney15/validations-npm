@@ -53,7 +53,10 @@ Install the package using npm:
 
 ```bash
 npm install check-javascript-typescript-validations
-or 
+```
+
+Install the package using yarn:
+```bash
 yarn add check-javascript-typescript-validations
 ```
 

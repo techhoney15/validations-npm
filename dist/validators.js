@@ -1,6 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.variableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
+exports.differenceOfTwoDates = exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.variableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
+var moment_1 = __importDefault(require("moment"));
 // Email is valid or not
 function isValidEmail(email) {
     var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
@@ -157,3 +161,44 @@ function compareTwoStrings(str1, str2) {
     }
 }
 exports.compareTwoStrings = compareTwoStrings;
+// Get Difference between 2 dates
+function differenceOfTwoDates(_startDate, _endDate) {
+    if (_startDate === void 0) { _startDate = new Date(); }
+    if (!_endDate) {
+        return {
+            status: 404,
+            error: "error",
+            message: "End date is required"
+        };
+    }
+    var startDateTime = (0, moment_1.default)(_startDate).format();
+    var endDateTime = (0, moment_1.default)(_endDate).format();
+    var startDate = (0, moment_1.default)(startDateTime);
+    var endDate = (0, moment_1.default)(endDateTime);
+    if (!startDate.isValid() || !endDate.isValid()) {
+        return {
+            status: 400,
+            error: "error",
+            message: "Invalid date format"
+        };
+    }
+    if (endDate.isBefore(startDate)) {
+        return {
+            status: 404,
+            error: "error",
+            message: "End date should be greater than start date"
+        };
+    }
+    var duration = moment_1.default.duration(endDate.diff(startDate));
+    var remainingDays = duration.days();
+    var remainingHours = duration.hours();
+    var remainingMinutes = duration.minutes();
+    var remainingSeconds = duration.seconds();
+    return {
+        days: remainingDays,
+        hours: remainingHours,
+        minutes: remainingMinutes,
+        seconds: remainingSeconds
+    };
+}
+exports.differenceOfTwoDates = differenceOfTwoDates;

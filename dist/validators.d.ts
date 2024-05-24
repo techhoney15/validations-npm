@@ -1,4 +1,4 @@
-import { MixedType } from "./types";
+import { DateDifferenceResult, MixedType } from "./types";
 export declare function isValidEmail(email: string): boolean;
 export declare function deepCloneArray(arr: MixedType[]): boolean;
 export declare function variableIsEmpty(inputValue: any): boolean;
@@ -12,3 +12,4 @@ export declare function removeDuplicatesFromArray<T>(array: T[]): T[];
 export declare function sortArray<T extends number | string>(array: T[], ascending?: boolean): T[];
 export declare function removeDuplicatesAndSortArray<T extends number | string>(array: T[], ascending?: boolean): T[];
 export declare function compareTwoStrings(str1: string, str2: string): boolean;
+export declare function differenceOfTwoDates(_startDate: string | Date | undefined, _endDate: string): DateDifferenceResult;

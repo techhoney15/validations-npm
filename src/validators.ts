@@ -1,4 +1,5 @@
-import { MixedType } from "./types"
+import moment from "moment"
+import { DateDifferenceResult, MixedType } from "./types"
 
 // Email is valid or not
 export function isValidEmail(email: string): boolean {
@@ -134,4 +135,52 @@ export function compareTwoStrings(str1: string, str2: string): boolean {
             return false
         }
     }
+}
+
+// Get Difference between 2 dates
+export function differenceOfTwoDates(_startDate: Date | string = new Date(), _endDate: string): DateDifferenceResult {
+
+    if (!_endDate) {
+        return {
+            status: 404,
+            error: "error",
+            message: "End date is required"
+        };
+    }
+
+    const startDateTime = moment(_startDate).format();
+    const endDateTime = moment(_endDate).format();
+
+    const startDate = moment(startDateTime);
+    const endDate = moment(endDateTime);
+
+    if (!startDate.isValid() || !endDate.isValid()) {
+        return {
+            status: 400,
+            error: "error",
+            message: "Invalid date format"
+        };
+    }
+
+    if (endDate.isBefore(startDate)) {
+        return {
+            status: 404,
+            error: "error",
+            message: "End date should be greater than start date"
+        };
+    }
+
+    const duration = moment.duration(endDate.diff(startDate));
+
+    const remainingDays = duration.days();
+    const remainingHours = duration.hours();
+    const remainingMinutes = duration.minutes();
+    const remainingSeconds = duration.seconds();
+
+    return {
+        days: remainingDays,
+        hours: remainingHours,
+        minutes: remainingMinutes,
+        seconds: remainingSeconds
+    };
 }

@@ -7,6 +7,10 @@
 
 The check-javascript-typescript-validations package offers essential utility functions for validating common data types and performing array operations in JavaScript and TypeScript environments. It simplifies the validation process by providing functions to check email validity, phone number formatting, password strength, and date validity. Additionally, it includes functions to determine the language of a text, check variable emptiness, and verify numeric data types. For array manipulation, the package offers functions to remove duplicates, sort arrays, and both remove duplicates and sort arrays simultaneously. These utilities enhance code quality and reliability by ensuring that data meets specified criteria, contributing to more robust applications and smoother user experiences.
 
+## Support
+
+JavaScript, TypeScript, React JS, React Native , Node JS, Next JS, Nest JS, etc.
+
 
 ## ValidationFunctions.ts
 ```bash
@@ -77,7 +81,8 @@ import {
     removeDuplicatesFromArray,
     sortArray,
     removeDuplicatesAndSortArray,
-    compareTwoStrings
+    compareTwoStrings,
+    differenceOfTwoDates
 } from './check-javascript-typescript-validations';
 
 // Example usage of isValidEmail
@@ -132,4 +137,10 @@ console.log(removeDuplicatesAndSortArray(arrayWithDuplicates)); // [1, 2, 3, 5, 
 const str1 = "hello";
 const str2 = "hello";
 console.log(compareTwoStrings(str1, str2)); // true
+
+// Example of  differenceOfTwoDates
+const startDate = "2024-05-10"; // Start date format will be  *** YYYY-MM-DD ***
+const endDate = "2024-05-20"; // End date format will be  *** YYYY-MM-DD ***
+console.log(differenceOfTwoDates(startDate, endDate)); // {  days: 10 ,hours: 0, minutes: 0, seconds: 0 }
+
 ```

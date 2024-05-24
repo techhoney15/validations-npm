@@ -28,7 +28,7 @@ This function determines whether a text string is in Arabic.
 isTextEnglish
 This function determines whether a text string is in English.
 
-VariableIsEmpty
+variableIsEmpty
 This function checks whether a variable is empty or undefined.
 
 checkIsNumber
@@ -67,7 +67,7 @@ yarn add check-javascript-typescript-validations
 import {
     isValidEmail,
     deepCloneArray,
-    VariableIsEmpty,
+    variableIsEmpty,
     isTextArabic,
     isTextEnglish,
     checkIsNumber,
@@ -88,9 +88,9 @@ console.log(isValidEmail(email)); // true
 const originalArray = [{ id: 1 }, { id: 2 }]; 
 console.log(deepCloneArray(originalArray)); // [{ id: 1 }, { id: 2 }]
 
-// Example usage of VariableIsEmpty
+// Example usage of variableIsEmpty
 const emptyString = "";
-console.log(VariableIsEmpty(emptyString)); // true
+console.log(variableIsEmpty(emptyString)); // true
 
 // Example usage of isTextArabic
 const arabicText = "مرحبا";

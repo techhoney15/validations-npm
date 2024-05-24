@@ -1,7 +1,7 @@
 import { MixedType } from "./types";
 export declare function isValidEmail(email: string): boolean;
 export declare function deepCloneArray(arr: MixedType[]): boolean;
-export declare function VariableIsEmpty(inputValue: any): boolean;
+export declare function variableIsEmpty(inputValue: any): boolean;
 export declare function isTextArabic(text: string): boolean;
 export declare function isTextEnglish(text: string): boolean;
 export declare function checkIsNumber(num: any): boolean;

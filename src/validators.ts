@@ -16,7 +16,7 @@ export function deepCloneArray(arr: MixedType[]): boolean {
 }
 
 // Variable is empty or not
-export function VariableIsEmpty(inputValue: any): boolean {
+export function variableIsEmpty(inputValue: any): boolean {
     if (inputValue == undefined) {
         return true;
     } else if (inputValue == null) {
@@ -115,9 +115,9 @@ export function removeDuplicatesAndSortArray<T extends number | string>(array: T
 export function compareTwoStrings(str1: string, str2: string): boolean {
     if (typeof str1 != "string" && typeof str2 != "string") {
         return false
-    } else if (VariableIsEmpty(str1)) {
+    } else if (variableIsEmpty(str1)) {
         return false
-    } else if (VariableIsEmpty(str2)) {
+    } else if (variableIsEmpty(str2)) {
         return false
     } else if (str1.length != str2.length) {
         return false

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.VariableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
+exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.variableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
 // Email is valid or not
 function isValidEmail(email) {
     var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
@@ -18,7 +18,7 @@ function deepCloneArray(arr) {
 }
 exports.deepCloneArray = deepCloneArray;
 // Variable is empty or not
-function VariableIsEmpty(inputValue) {
+function variableIsEmpty(inputValue) {
     if (inputValue == undefined) {
         return true;
     }
@@ -32,7 +32,7 @@ function VariableIsEmpty(inputValue) {
         return false;
     }
 }
-exports.VariableIsEmpty = VariableIsEmpty;
+exports.variableIsEmpty = variableIsEmpty;
 ;
 // Check your text is arabic or not
 function isTextArabic(text) {
@@ -132,10 +132,10 @@ function compareTwoStrings(str1, str2) {
     if (typeof str1 != "string" && typeof str2 != "string") {
         return false;
     }
-    else if (VariableIsEmpty(str1)) {
+    else if (variableIsEmpty(str1)) {
         return false;
     }
-    else if (VariableIsEmpty(str2)) {
+    else if (variableIsEmpty(str2)) {
         return false;
     }
     else if (str1.length != str2.length) {

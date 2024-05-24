@@ -39,6 +39,8 @@
     "Validations",
     "TypeScript",
     "JavaScript",
-    "Date-Validations"
+    "Date-Validations",
+    "Date",
+    "moment"
   ]
 }

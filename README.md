@@ -49,6 +49,9 @@ This function sorts the elements of an array in ascending or descending order.
 
 removeAndSortArray
 This function removes duplicates from an array and then sorts it, providing a streamlined approach to data manipulation.
+
+differenceOfTwoDates
+This function will give you a difference between 2 dates.
 ```
 
 ## Installation

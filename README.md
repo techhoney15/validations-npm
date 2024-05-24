@@ -7,7 +7,7 @@
 
 The check-javascript-typescript-validations package offers essential utility functions for validating common data types and performing array operations in JavaScript and TypeScript environments. It simplifies the validation process by providing functions to check email validity, phone number formatting, password strength, and date validity. Additionally, it includes functions to determine the language of a text, check variable emptiness, and verify numeric data types. For array manipulation, the package offers functions to remove duplicates, sort arrays, and both remove duplicates and sort arrays simultaneously. These utilities enhance code quality and reliability by ensuring that data meets specified criteria, contributing to more robust applications and smoother user experiences.
 
-## Support
+## Can work on
 
 JavaScript, TypeScript, React JS, React Native , Node JS, Next JS, Nest JS, etc.
 

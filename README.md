@@ -11,6 +11,18 @@ The check-javascript-typescript-validations package offers essential utility fun
 
 JavaScript, TypeScript, React JS, React Native , Node JS, Next JS, Nest JS, etc.
 
+## Installation
+
+Install the package using npm:
+
+```bash
+npm install check-javascript-typescript-validations
+```
+
+Install the package using yarn:
+```bash
+yarn add check-javascript-typescript-validations
+```
 
 ## ValidationFunctions.ts
 ```bash
@@ -54,21 +66,7 @@ differenceOfTwoDates
 This function will give you a difference between 2 dates.
 ```
 
-## Installation
-
-Install the package using npm:
-
-```bash
-npm install check-javascript-typescript-validations
-```
-
-Install the package using yarn:
-```bash
-yarn add check-javascript-typescript-validations
-```
-
 ## Overview
-
 
 ```javascript
 import {

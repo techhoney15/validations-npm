@@ -184,3 +184,19 @@ export function differenceOfTwoDates(_startDate: Date | string = new Date(), _en
         seconds: remainingSeconds
     };
 }
+
+export const checkDataEmptyOrNot = (_data: any) => {
+    if (_data == undefined) {
+        return true;
+    } else if (_data == null) {
+        return true;
+    } else if (Array.isArray(_data) && _data.length === 0) {
+        return true
+    } else if (typeof _data === "object" && Object.keys(_data).length === 0) {
+        return true
+    } else if (typeof _data === "string" && _data.trim().length === 0) {
+        return true
+    } else {
+        return false
+    }
+}

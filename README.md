@@ -144,4 +144,9 @@ const startDate = "2024-05-10"; // Start date format will be  *** YYYY-MM-DD ***
 const endDate = "2024-05-20"; // End date format will be  *** YYYY-MM-DD ***
 console.log(differenceOfTwoDates(startDate, endDate)); // {  days: 10 ,hours: 0, minutes: 0, seconds: 0 }
 
+console.log(checkDataEmptyOrNot([])) // true <-  Empty
+console.log(checkDataEmptyOrNot({})) // true <-  Empty
+console.log(checkDataEmptyOrNot({a:1})) // false <- not Empty
+console.log(checkDataEmptyOrNot(2)) // false <- not Empty
+console.log(checkDataEmptyOrNot("abc")) // false <- not Empty
 ```

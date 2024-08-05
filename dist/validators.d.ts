@@ -13,3 +13,4 @@ export declare function sortArray<T extends number | string>(array: T[], ascendi
 export declare function removeDuplicatesAndSortArray<T extends number | string>(array: T[], ascending?: boolean): T[];
 export declare function compareTwoStrings(str1: string, str2: string): boolean;
 export declare function differenceOfTwoDates(_startDate: string | Date | undefined, _endDate: string): DateDifferenceResult;
+export declare const checkDataEmptyOrNot: (_data: any) => boolean;

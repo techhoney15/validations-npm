@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.differenceOfTwoDates = exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.variableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
+exports.checkDataEmptyOrNot = exports.differenceOfTwoDates = exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.variableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
 var moment_1 = __importDefault(require("moment"));
 // Email is valid or not
 function isValidEmail(email) {
@@ -202,3 +202,24 @@ function differenceOfTwoDates(_startDate, _endDate) {
     };
 }
 exports.differenceOfTwoDates = differenceOfTwoDates;
+var checkDataEmptyOrNot = function (_data) {
+    if (_data == undefined) {
+        return true;
+    }
+    else if (_data == null) {
+        return true;
+    }
+    else if (Array.isArray(_data) && _data.length === 0) {
+        return true;
+    }
+    else if (typeof _data === "object" && Object.keys(_data).length === 0) {
+        return true;
+    }
+    else if (typeof _data === "string" && _data.trim().length === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+};
+exports.checkDataEmptyOrNot = checkDataEmptyOrNot;

@@ -1,6 +1,6 @@
 {
   "name": "check-javascript-typescript-validations",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "To check all the validations related to javascript and typescript.",
   "main": "dist/validators.js",
   "types": "dist/validators.d.ts",

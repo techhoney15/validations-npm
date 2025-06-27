@@ -20,11 +20,13 @@ npm install check-javascript-typescript-validations
 ```
 
 Install the package using yarn:
+
 ```bash
 yarn add check-javascript-typescript-validations
 ```
 
 ## ValidationFunctions.ts
+
 ```bash
 isValidEmail
 This function validates whether an email address is in the correct format.
@@ -52,6 +54,7 @@ This function checks if a value is a number.
 ```
 
 ## ArrayOperations.ts
+
 ```bash
 removeDuplicatesFromArray
 This function removes duplicate elements from an array while preserving the original order.
@@ -70,28 +73,28 @@ This function will give you a difference between 2 dates.
 
 ```javascript
 import {
-    isValidEmail,
-    deepCloneArray,
-    variableIsEmpty,
-    isTextArabic,
-    isTextEnglish,
-    checkIsNumber,
-    isValidPhoneNumber,
-    isStrongPassword,
-    isValidDate,
-    removeDuplicatesFromArray,
-    sortArray,
-    removeDuplicatesAndSortArray,
-    compareTwoStrings,
-    differenceOfTwoDates
-} from './check-javascript-typescript-validations';
+  isValidEmail,
+  deepCloneArray,
+  variableIsEmpty,
+  isTextArabic,
+  isTextEnglish,
+  checkIsNumber,
+  isValidPhoneNumber,
+  isStrongPassword,
+  isValidDate,
+  removeDuplicatesFromArray,
+  sortArray,
+  removeDuplicatesAndSortArray,
+  compareTwoStrings,
+  differenceOfTwoDates,
+} from "./check-javascript-typescript-validations";
 
 // Example usage of isValidEmail
 const email = "test@example.com";
 console.log(isValidEmail(email)); // true
 
 // Example usage of deepCloneArray
-const originalArray = [{ id: 1 }, { id: 2 }]; 
+const originalArray = [{ id: 1 }, { id: 2 }];
 console.log(deepCloneArray(originalArray)); // [{ id: 1 }, { id: 2 }]
 
 // Example usage of variableIsEmpty
@@ -127,11 +130,11 @@ const array = [1, 2, 2, 3, 4, 4, 5];
 console.log(removeDuplicatesFromArray(array)); // [1, 2, 3, 4, 5]
 
 // Example usage of sortArray
-const unsortedArray = [5, 3, 8, 1, 2]; 
+const unsortedArray = [5, 3, 8, 1, 2];
 console.log(sortArray(unsortedArray)); // [1, 2, 3, 5, 8]
 
 // Example usage of removeDuplicatesAndSortArray
-const arrayWithDuplicates = [5, 3, 8, 1, 2, 3, 5]; 
+const arrayWithDuplicates = [5, 3, 8, 1, 2, 3, 5];
 console.log(removeDuplicatesAndSortArray(arrayWithDuplicates)); // [1, 2, 3, 5, 8]
 
 // Example usage of compareTwoStrings
@@ -144,9 +147,9 @@ const startDate = "2024-05-10"; // Start date format will be  *** YYYY-MM-DD ***
 const endDate = "2024-05-20"; // End date format will be  *** YYYY-MM-DD ***
 console.log(differenceOfTwoDates(startDate, endDate)); // {  days: 10 ,hours: 0, minutes: 0, seconds: 0 }
 
-console.log(checkDataEmptyOrNot([])) // true <-  Empty
-console.log(checkDataEmptyOrNot({})) // true <-  Empty
-console.log(checkDataEmptyOrNot({a:1})) // false <- not Empty
-console.log(checkDataEmptyOrNot(2)) // false <- not Empty
-console.log(checkDataEmptyOrNot("abc")) // false <- not Empty
+console.log(checkDataEmptyOrNot([])); // true <-  Empty
+console.log(checkDataEmptyOrNot({})); // true <-  Empty
+console.log(checkDataEmptyOrNot({ a: 1 })); // false <- not Empty
+console.log(checkDataEmptyOrNot(2)); // false <- not Empty
+console.log(checkDataEmptyOrNot("abc")); // false <- not Empty
 ```

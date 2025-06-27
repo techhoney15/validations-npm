@@ -5,8 +5,9 @@
   "main": "dist/validators.js",
   "types": "dist/validators.d.ts",
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "build": "npx tsc && node dist/validators.js",
+    "prepublishOnly": "npm run build",
+    "push": "git add . && git commit -m \"update\" && git push origin main"
   },
   "files": [
     "dist/**/*"

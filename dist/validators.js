@@ -29,7 +29,7 @@ function variableIsEmpty(inputValue) {
     else if (inputValue == null) {
         return true;
     }
-    else if (inputValue.trim() == '') {
+    else if (inputValue.trim() == "") {
         return true;
     }
     else {
@@ -37,11 +37,10 @@ function variableIsEmpty(inputValue) {
     }
 }
 exports.variableIsEmpty = variableIsEmpty;
-;
 // Check your text is arabic or not
 function isTextArabic(text) {
     var arabicRegex = /^[\u0600-\u06FF\s]*$/;
-    if (arabicRegex.test(text) || text === '') {
+    if (arabicRegex.test(text) || text === "") {
         return true;
     }
     else {
@@ -52,7 +51,7 @@ exports.isTextArabic = isTextArabic;
 // Check your text is english or not
 function isTextEnglish(text) {
     var englishRegex = /[^a-zA-Z\s]/g;
-    if (englishRegex.test(text) || text === '') {
+    if (englishRegex.test(text) || text === "") {
         return false;
     }
     else {
@@ -105,7 +104,7 @@ function removeDuplicatesFromArray(array) {
     }
 }
 exports.removeDuplicatesFromArray = removeDuplicatesFromArray;
-// Sort array 
+// Sort array
 function sortArray(array, ascending) {
     if (ascending === void 0) { ascending = true; }
     if (Array.isArray(array) && array.length > 0) {
@@ -168,7 +167,7 @@ function differenceOfTwoDates(_startDate, _endDate) {
         return {
             status: 404,
             error: "error",
-            message: "End date is required"
+            message: "End date is required",
         };
     }
     var startDateTime = (0, moment_1.default)(_startDate).format();
@@ -179,14 +178,14 @@ function differenceOfTwoDates(_startDate, _endDate) {
         return {
             status: 400,
             error: "error",
-            message: "Invalid date format"
+            message: "Invalid date format",
         };
     }
     if (endDate.isBefore(startDate)) {
         return {
             status: 404,
             error: "error",
-            message: "End date should be greater than start date"
+            message: "End date should be greater than start date",
         };
     }
     var duration = moment_1.default.duration(endDate.diff(startDate));
@@ -198,7 +197,7 @@ function differenceOfTwoDates(_startDate, _endDate) {
         days: remainingDays,
         hours: remainingHours,
         minutes: remainingMinutes,
-        seconds: remainingSeconds
+        seconds: remainingSeconds,
     };
 }
 exports.differenceOfTwoDates = differenceOfTwoDates;

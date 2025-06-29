@@ -1,6 +1,6 @@
 {
   "name": "check-javascript-typescript-validations",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "To check all the validations related to javascript and typescript.",
   "main": "dist/validators.js",
   "types": "dist/validators.d.ts",
@@ -42,6 +42,12 @@
     "JavaScript",
     "Date-Validations",
     "Date",
-    "moment"
+    "moment",
+    "Detect-Language",
+    "Language-Detection",
+    "Language",
+    "Locale",
+    "i18n",
+    "Internationalization"
   ]
 }

@@ -3,7 +3,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkDataEmptyOrNot = exports.differenceOfTwoDates = exports.compareTwoStrings = exports.removeDuplicatesAndSortArray = exports.sortArray = exports.removeDuplicatesFromArray = exports.isValidDate = exports.isStrongPassword = exports.isValidPhoneNumber = exports.checkIsNumber = exports.isTextEnglish = exports.isTextArabic = exports.variableIsEmpty = exports.deepCloneArray = exports.isValidEmail = void 0;
+exports.checkDataEmptyOrNot = void 0;
+exports.isValidEmail = isValidEmail;
+exports.deepCloneArray = deepCloneArray;
+exports.variableIsEmpty = variableIsEmpty;
+exports.checkIsNumber = checkIsNumber;
+exports.isValidPhoneNumber = isValidPhoneNumber;
+exports.isStrongPassword = isStrongPassword;
+exports.isValidDate = isValidDate;
+exports.removeDuplicatesFromArray = removeDuplicatesFromArray;
+exports.sortArray = sortArray;
+exports.removeDuplicatesAndSortArray = removeDuplicatesAndSortArray;
+exports.compareTwoStrings = compareTwoStrings;
+exports.differenceOfTwoDates = differenceOfTwoDates;
 var moment_1 = __importDefault(require("moment"));
 // Email is valid or not
 function isValidEmail(email) {
@@ -15,12 +27,10 @@ function isValidEmail(email) {
         return true;
     }
 }
-exports.isValidEmail = isValidEmail;
 // Deep Clone an Array
 function deepCloneArray(arr) {
     return JSON.parse(JSON.stringify(arr));
 }
-exports.deepCloneArray = deepCloneArray;
 // Variable is empty or not
 function variableIsEmpty(inputValue) {
     if (inputValue == undefined) {
@@ -36,29 +46,24 @@ function variableIsEmpty(inputValue) {
         return false;
     }
 }
-exports.variableIsEmpty = variableIsEmpty;
-// Check your text is arabic or not
-function isTextArabic(text) {
-    var arabicRegex = /^[\u0600-\u06FF\s]*$/;
-    if (arabicRegex.test(text) || text === "") {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-exports.isTextArabic = isTextArabic;
-// Check your text is english or not
-function isTextEnglish(text) {
-    var englishRegex = /[^a-zA-Z\s]/g;
-    if (englishRegex.test(text) || text === "") {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
-exports.isTextEnglish = isTextEnglish;
+// // Check your text is arabic or not
+// export function isTextArabic(text: string): boolean {
+//   const arabicRegex = /^[\u0600-\u06FF\s]*$/;
+//   if (arabicRegex.test(text) || text === "") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// // Check your text is english or not
+// export function isTextEnglish(text: string): boolean {
+//   const englishRegex = /[^a-zA-Z\s]/g;
+//   if (englishRegex.test(text) || text === "") {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
 // Check value is number or not
 function checkIsNumber(num) {
     if (typeof num === "number") {
@@ -68,7 +73,6 @@ function checkIsNumber(num) {
         return false;
     }
 }
-exports.checkIsNumber = checkIsNumber;
 // Check valid phone number
 function isValidPhoneNumber(phoneNumber, requiredLength) {
     if (requiredLength === void 0) { requiredLength = 6; }
@@ -79,7 +83,6 @@ function isValidPhoneNumber(phoneNumber, requiredLength) {
     var phoneRegex = /^\+?[1-9]\d{1,14}$/; // E.164 format
     return phoneRegex.test(_phone);
 }
-exports.isValidPhoneNumber = isValidPhoneNumber;
 // Check Password is strong or not
 function isStrongPassword(password) {
     var _password = String(password);
@@ -87,13 +90,11 @@ function isStrongPassword(password) {
     var strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
     return strongPasswordRegex.test(_password);
 }
-exports.isStrongPassword = isStrongPassword;
 // Check Date is valid or not
 function isValidDate(date) {
     var parsedDate = Date.parse(date);
     return !isNaN(parsedDate);
 }
-exports.isValidDate = isValidDate;
 // Remove Duplicates from array
 function removeDuplicatesFromArray(array) {
     if (Array.isArray(array) && array.length > 0) {
@@ -103,7 +104,6 @@ function removeDuplicatesFromArray(array) {
         return array;
     }
 }
-exports.removeDuplicatesFromArray = removeDuplicatesFromArray;
 // Sort array
 function sortArray(array, ascending) {
     if (ascending === void 0) { ascending = true; }
@@ -121,7 +121,6 @@ function sortArray(array, ascending) {
         return array;
     }
 }
-exports.sortArray = sortArray;
 // Remove duplicates and sort an array
 function removeDuplicatesAndSortArray(array, ascending) {
     if (ascending === void 0) { ascending = true; }
@@ -129,7 +128,6 @@ function removeDuplicatesAndSortArray(array, ascending) {
     var newArr = sortArray(array, ascending);
     return newArr;
 }
-exports.removeDuplicatesAndSortArray = removeDuplicatesAndSortArray;
 // Compare 2 strings are equal or not
 function compareTwoStrings(str1, str2) {
     if (typeof str1 != "string" && typeof str2 != "string") {
@@ -159,7 +157,6 @@ function compareTwoStrings(str1, str2) {
         }
     }
 }
-exports.compareTwoStrings = compareTwoStrings;
 // Get Difference between 2 dates
 function differenceOfTwoDates(_startDate, _endDate) {
     if (_startDate === void 0) { _startDate = new Date(); }
@@ -200,7 +197,6 @@ function differenceOfTwoDates(_startDate, _endDate) {
         seconds: remainingSeconds,
     };
 }
-exports.differenceOfTwoDates = differenceOfTwoDates;
 var checkDataEmptyOrNot = function (_data) {
     if (_data == undefined) {
         return true;

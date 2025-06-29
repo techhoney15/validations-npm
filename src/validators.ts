@@ -29,25 +29,25 @@ export function variableIsEmpty(inputValue: any): boolean {
   }
 }
 
-// Check your text is arabic or not
-export function isTextArabic(text: string): boolean {
-  const arabicRegex = /^[\u0600-\u06FF\s]*$/;
-  if (arabicRegex.test(text) || text === "") {
-    return true;
-  } else {
-    return false;
-  }
-}
+// // Check your text is arabic or not
+// export function isTextArabic(text: string): boolean {
+//   const arabicRegex = /^[\u0600-\u06FF\s]*$/;
+//   if (arabicRegex.test(text) || text === "") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-// Check your text is english or not
-export function isTextEnglish(text: string): boolean {
-  const englishRegex = /[^a-zA-Z\s]/g;
-  if (englishRegex.test(text) || text === "") {
-    return false;
-  } else {
-    return true;
-  }
-}
+// // Check your text is english or not
+// export function isTextEnglish(text: string): boolean {
+//   const englishRegex = /[^a-zA-Z\s]/g;
+//   if (englishRegex.test(text) || text === "") {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
 
 // Check value is number or not
 export function checkIsNumber(num: any): boolean {

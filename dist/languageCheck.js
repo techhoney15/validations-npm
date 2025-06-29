@@ -1,12 +1,37 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.detectLanguage = void 0;
+exports.detectLanguage = detectLanguage;
+var UNKNOWN = {
+    name: "Unknown language detected",
+    country: "Unknown",
+};
+var NUMBER = {
+    name: "number",
+    country: "Unknown",
+};
+var BOOLEAN = {
+    name: "boolean",
+    country: "Unknown",
+};
 function detectLanguage(input) {
+    // Check if input is empty or not a string
+    if (input === null || input === undefined)
+        return UNKNOWN;
+    if (Array.isArray(input))
+        return UNKNOWN;
+    if (typeof input === "object" && Object.keys(input).length === 0)
+        return "Unknown language detected"; // Handle empty objects as Unknown language detected
+    if (typeof input === "number")
+        return NUMBER; // Handle numbers as number type
+    if (typeof input === "boolean")
+        return BOOLEAN; // Handle booleans as boolean type
+    if (typeof input === "bigint")
+        return NUMBER; // Handle bigints as bigint type
     if (!input || typeof input !== "string")
-        return "unknown";
+        return UNKNOWN;
     input = input.trim();
     if (/^\d+$/.test(input))
-        return "number";
+        return NUMBER;
     // Unicode range-based detection
     var unicodeMap = [
         {
@@ -615,10 +640,9 @@ function detectLanguage(input) {
         },
     ];
     for (var _i = 0, unicodeMap_1 = unicodeMap; _i < unicodeMap_1.length; _i++) {
-        var _a = unicodeMap_1[_i], name_1 = _a.name, regex = _a.regex;
+        var _a = unicodeMap_1[_i], name_1 = _a.name, country = _a.country, regex = _a.regex;
         if (regex.test(input))
-            return name_1;
+            return { name: name_1, country: country };
     }
-    return "unknown";
+    return UNKNOWN;
 }
-exports.detectLanguage = detectLanguage;

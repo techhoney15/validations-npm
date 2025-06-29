@@ -37,14 +37,11 @@ This function validates the format of a phone number, with an optional parameter
 isStrongPassword
 This function checks the strength of a password, ensuring it meets specific criteria for complexity.
 
+detectLanguage  
+This function detects the language of a given text, such as English or Arabic.
+
 isValidDate
 This function validates the format and correctness of a date.
-
-isTextArabic
-This function determines whether a text string is in Arabic.
-
-isTextEnglish
-This function determines whether a text string is in English.
 
 variableIsEmpty
 This function checks whether a variable is empty or undefined.
@@ -87,6 +84,7 @@ import {
   removeDuplicatesAndSortArray,
   compareTwoStrings,
   differenceOfTwoDates,
+  detectLanguage
 } from "./check-javascript-typescript-validations";
 
 // Example usage of isValidEmail
@@ -100,6 +98,13 @@ console.log(deepCloneArray(originalArray)); // [{ id: 1 }, { id: 2 }]
 // Example usage of variableIsEmpty
 const emptyString = "";
 console.log(variableIsEmpty(emptyString)); // true
+
+// Example usage of detectLanguage
+const text = "مرحبا بكم";
+console.log(detectLanguage(text)); // "arabic"
+
+const englishTextSample = "Welcome";
+console.log(detectLanguage(englishTextSample)); // "english"
 
 // Example usage of isTextArabic
 const arabicText = "مرحبا";
@@ -153,3 +158,7 @@ console.log(checkDataEmptyOrNot({ a: 1 })); // false <- not Empty
 console.log(checkDataEmptyOrNot(2)); // false <- not Empty
 console.log(checkDataEmptyOrNot("abc")); // false <- not Empty
 ```
+
+## Keywords
+
+JavaScript, TypeScript, validation, email validation, phone number validation, password strength, date validation, language detection, array operations, remove duplicates, sort array, data validation, utility functions, data types, check empty, number check, compare strings, date difference, npm package, frontend, backend, Node.js, React, Next.js, NestJS 

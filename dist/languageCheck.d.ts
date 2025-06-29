@@ -1,1 +1,1 @@
-export declare function detectLanguage(input: string | null): string;
+export declare function detectLanguage(input: any): any;

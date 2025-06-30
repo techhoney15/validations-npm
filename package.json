@@ -1,6 +1,6 @@
 {
   "name": "check-javascript-typescript-validations",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "To check all the validations related to javascript and typescript.",
   "main": "dist/validators.js",
   "types": "dist/validators.d.ts",
@@ -19,9 +19,9 @@
   "author": "Honey Kumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/honey10597/NPM-Package/issues"
+    "url": "https://github.com/techhoney15/validations-npm/issues"
   },
-  "homepage": "https://github.com/honey10597/NPM-Package#readme",
+  "homepage": "https://github.com/techhoney15/validations-npm#readme",
   "devDependencies": {
     "@types/node": "^20.12.12",
     "ts-node": "^10.9.2",

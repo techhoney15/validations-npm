@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.checkDataEmptyOrNot = void 0;
+exports.validateIndianPAN = exports.validateCreditCard = exports.validateURL = exports.validateUsername = exports.checkDataEmptyOrNot = void 0;
 exports.isValidEmail = isValidEmail;
 exports.deepCloneArray = deepCloneArray;
 exports.variableIsEmpty = variableIsEmpty;
@@ -218,3 +218,40 @@ var checkDataEmptyOrNot = function (_data) {
     }
 };
 exports.checkDataEmptyOrNot = checkDataEmptyOrNot;
+var validateUsername = function (username, min, max) {
+    if (min === void 0) { min = 3; }
+    if (max === void 0) { max = 16; }
+    var re = new RegExp("^[a-zA-Z0-9_]{".concat(min, ",").concat(max, "}$"));
+    return re.test(username);
+};
+exports.validateUsername = validateUsername;
+var validateURL = function (url) {
+    try {
+        new URL(url);
+        return true;
+    }
+    catch (_a) {
+        return false;
+    }
+};
+exports.validateURL = validateURL;
+var validateCreditCard = function (number) {
+    var sanitized = number.replace(/\D/g, '');
+    var sum = 0, shouldDouble = false;
+    for (var i = sanitized.length - 1; i >= 0; i--) {
+        var digit = +sanitized[i];
+        if (shouldDouble) {
+            digit *= 2;
+            if (digit > 9)
+                digit -= 9;
+        }
+        sum += digit;
+        shouldDouble = !shouldDouble;
+    }
+    return sanitized.length >= 13 && sanitized.length <= 19 && (sum % 10 === 0);
+};
+exports.validateCreditCard = validateCreditCard;
+var validateIndianPAN = function (pan) {
+    return /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan.toUpperCase());
+};
+exports.validateIndianPAN = validateIndianPAN;

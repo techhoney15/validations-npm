@@ -12,3 +12,7 @@ export declare function removeDuplicatesAndSortArray<T extends number | string>(
 export declare function compareTwoStrings(str1: string, str2: string): boolean;
 export declare function differenceOfTwoDates(_startDate: (Date | string) | undefined, _endDate: string): DateDifferenceResult;
 export declare const checkDataEmptyOrNot: (_data: any) => boolean;
+export declare const validateUsername: (username: any, min?: number, max?: number) => boolean;
+export declare const validateURL: (url: any) => boolean;
+export declare const validateCreditCard: (number: any) => boolean;
+export declare const validateIndianPAN: (pan: any) => boolean;

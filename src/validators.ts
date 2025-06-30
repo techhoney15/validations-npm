@@ -212,3 +212,36 @@ export const checkDataEmptyOrNot = (_data: any) => {
     return false;
   }
 };
+
+export const validateUsername = (username: any, min = 3, max = 16) => {
+  const re = new RegExp(`^[a-zA-Z0-9_]{${min},${max}}$`);
+  return re.test(username);
+}
+
+export const validateURL = (url: any) => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export const validateCreditCard = (number: any) => {
+  const sanitized = number.replace(/\D/g, '');
+  let sum = 0, shouldDouble = false;
+  for (let i = sanitized.length - 1; i >= 0; i--) {
+    let digit = +sanitized[i];
+    if (shouldDouble) {
+      digit *= 2;
+      if (digit > 9) digit -= 9;
+    }
+    sum += digit;
+    shouldDouble = !shouldDouble;
+  }
+  return sanitized.length >= 13 && sanitized.length <= 19 && (sum % 10 === 0);
+}
+
+export const validateIndianPAN = (pan: any) => {
+  return /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(pan.toUpperCase());
+}

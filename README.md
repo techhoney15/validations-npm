@@ -48,6 +48,18 @@ This function checks whether a variable is empty or undefined.
 
 checkIsNumber
 This function checks if a value is a number.
+
+validateUsername  
+This function validates a username, ensuring it contains only alphanumeric characters and underscores, and its length is within the specified minimum and maximum range (default: 3–16).
+
+validateURL  
+This function checks if a given string is a valid URL.
+
+validateCreditCard  
+This function validates a credit card number using the Luhn algorithm.
+
+validateIndianPAN  
+This function checks if a given string is a valid Indian PAN (Permanent Account Number) format.
 ```
 
 ## ArrayOperations.ts
@@ -73,8 +85,6 @@ import {
   isValidEmail,
   deepCloneArray,
   variableIsEmpty,
-  isTextArabic,
-  isTextEnglish,
   checkIsNumber,
   isValidPhoneNumber,
   isStrongPassword,
@@ -84,12 +94,20 @@ import {
   removeDuplicatesAndSortArray,
   compareTwoStrings,
   differenceOfTwoDates,
-  detectLanguage
+  detectLanguage,
+  validateUsername,
+  validateURL,
+  validateCreditCard,
+  validateIndianPAN,
 } from "./check-javascript-typescript-validations";
 
 // Example usage of isValidEmail
 const email = "test@example.com";
 console.log(isValidEmail(email)); // true
+
+// Example usage of detectLanguage
+const text = "مرحبا كيف حالك؟";
+console.log(detectLanguage(text)); // "arabic"
 
 // Example usage of deepCloneArray
 const originalArray = [{ id: 1 }, { id: 2 }];
@@ -98,21 +116,6 @@ console.log(deepCloneArray(originalArray)); // [{ id: 1 }, { id: 2 }]
 // Example usage of variableIsEmpty
 const emptyString = "";
 console.log(variableIsEmpty(emptyString)); // true
-
-// Example usage of detectLanguage
-const text = "مرحبا بكم";
-console.log(detectLanguage(text)); // "arabic"
-
-const englishTextSample = "Welcome";
-console.log(detectLanguage(englishTextSample)); // "english"
-
-// Example usage of isTextArabic
-const arabicText = "مرحبا";
-console.log(isTextArabic(arabicText)); // true
-
-// Example usage of isTextEnglish
-const englishText = "Hello";
-console.log(isTextEnglish(englishText)); // true
 
 // Example usage of checkIsNumber
 const value = 123;
@@ -151,6 +154,22 @@ console.log(compareTwoStrings(str1, str2)); // true
 const startDate = "2024-05-10"; // Start date format will be  *** YYYY-MM-DD ***
 const endDate = "2024-05-20"; // End date format will be  *** YYYY-MM-DD ***
 console.log(differenceOfTwoDates(startDate, endDate)); // {  days: 10 ,hours: 0, minutes: 0, seconds: 0 }
+
+// Example usage of validateUsername
+const username = "user_name123";
+console.log(validateUsername(username)); // true
+
+// Example usage of validateURL
+const url = "https://www.example.com";
+console.log(validateURL(url)); // true
+
+// Example usage of validateCreditCard
+const creditCardNumber = "4111111111111111";
+console.log(validateCreditCard(creditCardNumber)); // true
+
+// Example usage of validateIndianPAN
+const pan = "ABCDE1234F";
+console.log(validateIndianPAN(pan)); // true
 
 console.log(checkDataEmptyOrNot([])); // true <-  Empty
 console.log(checkDataEmptyOrNot({})); // true <-  Empty

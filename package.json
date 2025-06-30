@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/honey10597/NPM-Package.git"
+    "url": "git+https://github.com/techhoney15/validations-npm.git"
   },
   "author": "Honey Kumar",
   "license": "ISC",
@@ -48,6 +48,37 @@
     "Language",
     "Locale",
     "i18n",
-    "Internationalization"
+    "Internationalization",
+    "Localization",
+    "i18n-js",
+    "i18n-js-validations",
+    "i18n-js-validations-npm",
+    "i18n-js-validations-npm-package",
+    "i18n-js-validations-npm-package-validations",
+    "validations-npm",
+    "validations-npm-package",
+    "validations-npm-package-validations",
+    "validations-npm-package-validations-js",
+    "validations-npm-package-validations-js-ts",
+    "validations-npm-package-validations-js-ts-validations",
+    "validations-npm-package-validations-js-ts-validations-js",
+    "validations-npm-package-validations-js-ts-validations-js-ts",
+    "isValidEmail",
+    "deepCloneArray",
+    "variableIsEmpty",
+    "checkIsNumber",
+    "isValidPhoneNumber",
+    "isStrongPassword",
+    "isValidDate",
+    "removeDuplicatesFromArray",
+    "sortArray",
+    "removeDuplicatesAndSortArray",
+    "compareTwoStrings",
+    "differenceOfTwoDates",
+    "detectLanguage",
+    "validateUsername",
+    "validateURL",
+    "validateCreditCard",
+    "validateIndianPAN"
   ]
 }
